@@ -3,183 +3,276 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/images/harshit_logo.png" type="image/x-icon" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-
   <title>Harshit Sharma - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="icon" href="assets/images/hs_logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="contain">
-      <ul class="menu">
-        <button class="menu-toggle" aria-label="Toggle Menu" title="Menu">
-          <i class="fas fa-bars"></i>
-        </button>
-        <li>
-          <a href="#home" title="About"><i class="icon fa-solid fa-house"></i></a>
-        </li>
-        <li>
-          <a href="#timeline" title="Experience"><i class="icon fa-solid fa-briefcase"></i></a>
-        </li>
-        <li>
-          <a href="#skills" title="Skills"><i class="icon fa-solid fa-code"></i></a>
-        </li>
-        <li>
-          <a href="#contact" title="Contact"><i class="icon fa-solid fa-phone"></i></a>
-        </li>
-        <button class="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Dark Mode">
-          <i class="fa-solid fa-moon"></i>
-        </button>
+  <nav id="desktop-nav">
+    <div class="logo">Harshit Sharma</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <!-- <li><a href="#projects">Projects</a></li> -->
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <header>
-    <section id="home">
-      <div class="section-image">
-        <div>
-          <img src="assets/images/pic_harshit.png" alt="Hero Background" class="heroImage" />
-        </div>
-        <div>
-          <h1 class="transition-ease">Hi, I'm Harshit! 👋</h1>
-          <p class="transition-ease">
-            I develop creative and interactive designs.
-          </p>
-          <div>
-            <a href="assets/document/harshit_resume.pdf" download class="btn">
-              <i class="fas fa-download"></i> Download Resume
-            </a>
-            <a href="https://medium.com/@harshitynwa" target="_blank" rel="noopener noreferrer" class="btn">
-              Blog</a>
-          </div>
-        </div>
+  <nav id="hamburger-nav">
+    <div class="logo">Harshit Sharma</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="bg-social">
-        <span class="icon-bg">
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="assets/images/pic_harshit-circle.png" alt="Harshit Sharma profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Harshit👋</h1>
+      <p class="section__text__p2">I turn logic into pixels</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('assets/document/harshit_resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <span class="icon">
           <a href="https://www.linkedin.com/in/harshit-sharma-8a74061a3" target="_blank" rel="noopener noreferrer">
             <i class="icon fab fa-linkedin"></i></a>
-          <a href="https://github.com/harshitynwa" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/harshitynwa" rel="noopener noreferrer">
             <i class="icon fab fa-github"></i></a>
           <a href="mailto: harshit16m@gmail.com" target="_blank" rel="noopener noreferrer">
             <i class="icon fas fa-envelope"></i></a>
-          <a href="https://www.instagram.com/harshitynwa/" target="_blank" rel="noopener noreferrer">
-            <i class="icon fab fa-instagram"></i></a>
           <a href="https://medium.com/@harshitynwa" target="_blank" rel="noopener noreferrer">
             <i class="icon fa-brands fa-medium"></i></a>
         </span>
-      </div>
-    </section>
-  </header>
-  <!-- <section id="about">
-      <h2>About Me</h2>
-      <p>Your about content goes here.</p>
-    </section> -->
-  <section id="timeline">
-    <!-- <h1>Timeline</h1> -->
-    <div class="timeline contain">
-      <div class="container left-container">
-        <img src="assets/images/gemini_logo1.jpg" />
-        <div class="text-box">
-          <h2>Gemini Solutions Pvt Ltd</h2>
-          <small>2022-Present | Gurugram, India</small>
-          <p>
-            At Gemini, I contribute to the
-            <b>front-end</b> product development team, majorly in the
-            <b>BFSI sector</b>. Gemini is a Leading IT Consulting, Product
-            Development & Management Services Company based out of Gurugram,
-            India.
-          </p>
-          <!-- My role involves crafting dynamic
-              end-to-end features across multiple product lines, enhancing user
-              experiences through diverse flows. -->
-          <span class="left-container-arrow"></span>
-        </div>
-      </div>
-      <div class="container right-container">
-        <img src="assets/images/chd_angels.jpg" />
-        <div class="text-box">
-          <h2>Chandigarh Angels Network</h2>
-          <small>2021-2022 | Chandigarh, India </small>
-          <p>
-            Actively engaged with <b>startup founders</b> and investors,
-            fostering meaningful connections. CAN is an established
-            <b>Venture Capital and Private Equity</b> firm with seasoned
-            Investors shaping small business and ideas.
-          </p>
-          <span class="right-container-arrow"></span>
-        </div>
-      </div>
-      <div class="container left-container">
-        <img src="assets/images/panjab_uni.png" />
-        <div class="text-box">
-          <h2>Panjab University</h2>
-          <small>2018-2022 | Chandigarh, India</small>
-          <p>
-            Pursued <b>BE (ECE)</b> at Panjab University, I honed technical
-            prowess, embraced collaborative learning, and undertook projects
-            that merged theory and application. Worked on numerous
-            <b>hardware projects</b> involving a Wireless communication
-            systems.
-          </p>
-          <span class="left-container-arrow"></span>
-        </div>
+        <!-- <img src="assets/images/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://linkedin.com/'" />target="_blank"
+        <img src="assets/images/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/'" /> -->
       </div>
     </div>
   </section>
-  <section id="skills">
-    <!-- <h1>Skills</h1> -->
-    <div class="skills-section contain">
-      <div>
-        <img src="assets/images/coding_happy_guy.png" />
-      </div>
-      <div class="contain">
-        <p>
-          Proficient in HTML, CSS, and JavaScript frameworks and libraries
-          viz. <b>Angular</b> & <b>React</b>. Strong foundation in creating
-          intuitive user interfaces, responsive layouts, and cross-browser
-          compatibility. Familiarity with version control <b>Git</b> and eager
-          to learn new technologies to enhance web development prowess.
-        </p>
-        <h1 className="icon-bg">
-          <i class="icon fab fa-html5" title="HTML"></i>
-          <i class="icon fab fa-css3-alt" title="CSS"></i>
-          <i class="icon fas fa-file-code" title="Visual Studio Code"></i>
-          <i class="icon fab fa-angular" title="Angular"></i>
-          <i class="icon fa-brands fa-react" title="React"></i>
-          <!-- <i class="icon fab fa-github" title="Github"></i>
-            <i class="icon fab fa-linux" title="Linux"></i> -->
-        </h1>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <!-- <div class="section__pic-container">
+        <img src="assets/images/coding_happy_guy.png" alt="Profile picture" class="about-pic" />
+      </div> -->
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="assets/images/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Software Engineer</p>
+          </div>
+          <div class="details-container">
+            <img src="assets/images/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Bachelors of Engineering<br />Panjab University, Chandigarh</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p class="section__text__p1">
+            Experienced front-end developer working in financial services industry (investment banking, insurance),
+            proficient in <b>Angular, React, HTML, CSS, and JavaScript</b>. Strong in intuitive UI design, responsive
+            layouts, and Git version control.
+          </p>
+        </div>
       </div>
     </div>
+    <img src="assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
   </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tech & Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SASS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>TypeScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Material UI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tech & Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Angular</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="assets/images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <!-- <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="assets/images/project-1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="assets/images/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="assets/images/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section> -->
   <section id="contact">
-    <!-- <h1>Get in Touch</h1> -->
-    <div class="get-in-touch contain">
-      <div>
-        <img src="assets/images/contact_bg-use.png" />
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="assets/images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:harshit16m@gmail.com">harshit16m@gmail.com</a></p>
       </div>
-      <div class="form">
-        <h1>Wanna Connect?!</h1>
-        <p>Its Easy. You can write to me here 📝</p>
-        <input class="input" type="text" id="fullName" placeholder="Enter Full Name" />
-        <input class="input" type="text" id="emailId" placeholder="Enter Email Id" />
-        <input class="input msg" type="text" id="message" placeholder="Message" />
-        <button class="btn" id="connectBtn">Connect!</button>
+      <div class="contact-info-container">
+        <img src="assets/images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/harshit-sharma-8a74061a3" target="_blank">LinkedIn</a></p>
       </div>
     </div>
   </section>
-  <footer class="footer">
-    <p>
-      &copy; 2023 All rights reserved | Designed by
-      <a href="#" target="_blank">Harshit Sharma</a>.
-    </p>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <!-- <li><a href="#projects">Projects</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; Harshit Sharma. All Rights Reserved.</p>
   </footer>
-
   <script src="script.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 
 </html>
